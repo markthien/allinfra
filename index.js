@@ -3,7 +3,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const precalculate = Math.PI/180;
 const radiusOfEarth = 6371; // in km
-const filename = 'geolocs.csv';
+const filename = 'coffee_shops.csv';
 
 // This function is to download and save data file from a Url
 const downloadRemoteFile = (filename, url) => {
