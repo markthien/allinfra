@@ -74,16 +74,16 @@ const start = async () => {
   // calculate the distance netween 2 geolocation
   for (const row of rows) {
     distances.push({ 
-      place: row.name, 
+      name: row.name, 
       distance: parseFloat(getDistanceFrom2GeoLocation (lat, lon, row.lat, row.lon).toFixed(4))
     });
   }
   // sort the object array by distance and show first 3 nearest location
-  distances
-    .sort((a, b) => (a.distance > b.distance) ? 1 : -1)
-    .slice(0, 3).map(row => {
-      console.log(row);
-    });
+  distances = distances.sort((a, b) => (a.distance > b.distance) ? 1 : -1).slice(0, 3);
+
+  for (const row of distances) {
+    console.log(`${row.name},${row.distance}`);
+  }  
 }
 
 start();
