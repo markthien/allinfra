@@ -1,4 +1,5 @@
 # allinfra test
+# you need to install node in order to run this program. Please visit https://nodejs.org/en/download/
 # To install node package 
 $ npm i 
 # To run the program (3 input parameters) 
